@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elijah Bilokur — Software Designer & Builder</title>
+  <meta name="description" content="Elijah Bilokur is a software designer and builder. Lead Product Designer at Dayforce.">
+
+  <link rel="preload" href="/fonts/SuisseIntl-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    @font-face {
+      font-family: 'Suisse Intl';
+      src: url('/fonts/SuisseIntl-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Suisse Intl';
+      src: url('/fonts/SuisseIntl-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      background: #ffffff;
+      color: #1d1d1f;
+      font-family: 'Suisse Intl', Helvetica, Arial, sans-serif;
+    }
+    section { scroll-margin-top: 88px; }
+    ::selection { background: #1d1d1f; color: #ffffff; }
+
+    .page { min-height: 100vh; }
+
+    .hero {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 64px 20px;
+    }
+
+    .headline {
+      margin: 0;
+      max-width: 100%;
+      font-size: 54px;
+      line-height: 1.06;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      color: #111111;
+    }
+
+    .block { margin-top: 64px; }
+
+    .block-title {
+      margin: 0 0 36px;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0;
+      color: #000000;
+    }
+
+    .list { display: flex; flex-direction: column; }
+
+    .row {
+      display: flex;
+      gap: 40px;
+      padding: 20px 0;
+    }
+    .row + .row { border-top: 1px solid #ececec; }
+    .list > .row:first-child { padding-top: 0; }
+    .list > .row:last-child { padding-bottom: 0; }
+
+    .row-time {
+      flex: 0 0 150px;
+      white-space: nowrap;
+      font-size: 18px;
+      color: #86868b;
+      letter-spacing: -0.01em;
+    }
+    .row-main { flex: 1 1 auto; min-width: 0; }
+
+    .row-role {
+      font-size: 18px;
+      color: #1d1d1f;
+      letter-spacing: -0.01em;
+    }
+    .row-company {
+      margin-top: 6px;
+      font-size: 18px;
+      color: #86868b;
+      letter-spacing: -0.01em;
+    }
+    .company-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .company-line .row-company { margin-top: 0; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      background: #f0f0f1;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 400;
+      color: #000000;
+      letter-spacing: 0;
+    }
+    .tag svg { border-radius: 3px; display: block; }
+
+    .proj-desc {
+      margin-top: 6px;
+      max-width: 560px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #86868b;
+      letter-spacing: -0.01em;
+    }
+    .proj-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 16px;
+      color: #86868b;
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+      letter-spacing: -0.01em;
+      transition: color .2s ease;
+    }
+    .proj-link:hover { color: #000000; }
+
+    .connect-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .connect-links a {
+      font-size: 18px;
+      color: #1d1d1f;
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+      letter-spacing: -0.01em;
+      transition: opacity .2s ease;
+    }
+    .connect-links a:hover { opacity: 0.55; }
+
+    /* One-time intro: parts start hidden only when JS runs (see main.js). */
+    .reveal-init {
+      opacity: 0;
+      transform: translateY(22px);
+      filter: blur(10px);
+      will-change: opacity, transform, filter;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal-init {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .headline { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section id="about" class="hero">
+      <h1 class="headline" data-reveal>Elijah Bilokur is a software designer and builder.</h1>
+
+      <div class="block" data-reveal>
+        <p class="block-title">Experience</p>
+        <div class="list">
+
+          <div class="row">
+            <div class="row-time">2025 — Present</div>
+            <div class="row-main">
+              <div class="row-role">Lead Product Designer</div>
+              <div class="row-company">Dayforce</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row-time">2022 — 2025</div>
+            <div class="row-main">
+              <div class="row-role">Product Designer</div>
+              <div class="company-line">
+                <div class="row-company">Jitjatjo</div>
+                <span class="tag">Acquired by Dayforce</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row-time">2023 — 2024</div>
+            <div class="row-main">
+              <div class="row-role">Design Advisor</div>
+              <div class="company-line">
+                <div class="row-company">NUMI</div>
+                <span class="tag">
+                  <svg width="14" height="14" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect fill="#FB651E" x="0" y="0" width="256" height="256"></rect><path d="M119.373653,144.745813 L75.43296,62.4315733 L95.5144533,62.4315733 L121.36192,114.52416 C121.759575,115.452022 122.2235,116.413008 122.753707,117.407147 C123.283914,118.401285 123.747838,119.428546 124.145493,120.48896 C124.410597,120.886615 124.609422,121.251127 124.741973,121.582507 C124.874525,121.913886 125.007075,122.212123 125.139627,122.477227 C125.802386,123.802744 126.39886,125.095105 126.929067,126.354347 C127.459274,127.613589 127.923198,128.773399 128.320853,129.833813 C129.381268,127.580433 130.541078,125.1614 131.80032,122.57664 C133.059562,119.99188 134.351922,117.307747 135.67744,114.52416 L161.92256,62.4315733 L180.612267,62.4315733 L136.27392,145.739947 L136.27392,198.826667 L119.373653,198.826667 L119.373653,144.745813 Z" fill="#FFFFFF"></path></svg>
+                  Winter '20 batch
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row-time">2020 — 2021</div>
+            <div class="row-main">
+              <div class="row-role">Product Designer</div>
+              <div class="company-line">
+                <div class="row-company">Streamlabs</div>
+                <span class="tag">Acquired by Logitech</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row-time">2018 — 2020</div>
+            <div class="row-main">
+              <div class="row-role">Freelance Designer</div>
+              <div class="row-company">Self-Employed</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="block" data-reveal>
+        <p class="block-title">Side projects</p>
+        <div class="list">
+          <div class="row">
+            <div class="row-main">
+              <div class="row-role">Relay API</div>
+              <div class="proj-desc">Open-source REST API for Helium data.</div>
+              <a class="proj-link" href="https://relaywireless.com" target="_blank" rel="noopener">Open project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="block" data-reveal>
+        <p class="block-title">Connect</p>
+        <div class="connect-links">
+          <a href="https://x.com/elijahbilokur" target="_blank" rel="noopener">X (Twitter)</a>
+          <a href="https://github.com/elijahbilokur" target="_blank" rel="noopener">Github</a>
+          <a href="https://www.linkedin.com/in/elijahbilokur/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:madebyloma@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
